@@ -1,7 +1,7 @@
 # CUDA-PBD-Sandbox
 
 <p align="center"><img src="docs/viewer-compare.gif" alt="pbd_viewer compare mode: global (left) and active (right)" width="900"></p>
-<p align="center"><sub>실시간 뷰어 비교 모드 (RTX 3090). 왼쪽 global, 오른쪽 active 솔버에 같은 입력을 주고, 주황 칸은 이번 프레임에 보정한 블록입니다. <a href="docs/viewer-demo.mp4">전체 화면 기록 (50초)</a></sub></p>
+<p align="center"><sub>실시간 뷰어 비교 모드 (RTX 3090). 왼쪽 global, 오른쪽 active 솔버에 같은 입력을 주고, 주황 칸은 이번 프레임에 보정한 블록입니다.</sub></p>
 
 **C++ · CUDA · OpenGL · CMake** — 합성 격자 천(cloth)으로 만든 GPU Position-Based Dynamics 실험 프로젝트입니다. 같은 장면을 CPU·GPU의 전체(global) 보정과 **활성 블록 제한(active) 보정**으로 풀어 비용과 결과를 비교하고, 실시간 뷰어로 두 솔버를 나란히 확인할 수 있습니다.
 
@@ -167,10 +167,6 @@ docs/          README용 GIF와 화면 기록
 - 중력 아래에서는 Jacobi 잔여 오차 때문에 천이 아주 느리게 계속 움직여 블록이 잘 잠들지 않습니다. 이때는 fallback이 global 경로로 돌려 손해를 막을 뿐, 이득은 없습니다.
 - `atomicAdd` 누적은 합산 순서가 실행마다 달라 결과가 비트 단위로 결정적이지 않습니다 (CPU와의 차이는 1 mm 이내).
 - 충돌 처리와 XPBD(compliance)는 범위 밖입니다.
-
-## Background
-
-석사 연구(CT 볼륨 변형에서 변형이 일어난 블록만 PBD로 보정하는 혼합형 프레임워크)에서 다룬 **활성 영역 제한 보정** 아이디어를, 공개된 논문 수준의 개념만으로 **새로 설계·구현한 독립 샘플**입니다. 연구실 코드, ChainMail 구현, STC, CT·의료 데이터는 포함하지 않습니다.
 
 ## License
 
