@@ -1,0 +1,29 @@
+# build output
+build*/
+out/
+bin/
+obj/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.o
+*.lib
+*.a
+
+# IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+# local test, tools and generated data (not part of the public sample)
+tests/
+tools/
+dump/
+*.csv
+__pycache__/
+Run-*.cmd
