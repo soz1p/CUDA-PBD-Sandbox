@@ -11,8 +11,7 @@ namespace pbd
 enum class ConstraintKind : std::uint8_t
 {
     Structural,
-    Shear,
-    Bend
+    Shear
 };
 
 struct DistanceConstraint
@@ -35,10 +34,8 @@ struct ClothDesc
     int ny = 96;           // particles along the height
     float spacing = 0.02f; // rest distance between neighbours (m)
     bool shear = true;     // add diagonal constraints
-    bool bend = true;      // add skip-one constraints
     float stretchStiffness = 1.0f;
     float shearStiffness = 0.8f;
-    float bendStiffness = 0.3f;
     PinMode pin = PinMode::TopEdge;
 };
 

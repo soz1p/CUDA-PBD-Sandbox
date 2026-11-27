@@ -80,14 +80,6 @@ Cloth Cloth::makeGrid(const ClothDesc& desc)
                 AddConstraint(cloth, cloth.index(i + 1, j), cloth.index(i, j + 1), desc.shearStiffness,
                               ConstraintKind::Shear);
             }
-            if (desc.bend && i + 2 < desc.nx)
-            {
-                AddConstraint(cloth, p, cloth.index(i + 2, j), desc.bendStiffness, ConstraintKind::Bend);
-            }
-            if (desc.bend && j + 2 < desc.ny)
-            {
-                AddConstraint(cloth, p, cloth.index(i, j + 2), desc.bendStiffness, ConstraintKind::Bend);
-            }
         }
     }
     return cloth;
