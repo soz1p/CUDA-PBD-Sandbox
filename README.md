@@ -3,7 +3,7 @@
 <p align="center"><img src="docs/viewer-compare.gif" alt="pbd_viewer compare mode: global (left) and active (right)" width="900"></p>
 <p align="center"><sub>실시간 뷰어 비교 모드 (RTX 3090). 왼쪽 global, 오른쪽 active 솔버에 같은 입력을 주고, 주황 칸은 이번 프레임에 보정한 블록입니다.</sub></p>
 
-**C++ · CUDA · OpenGL · CMake** — 석사 연구 [VDR](https://github.com/soz1p/VDR-Showcase)의 활성 블록 제한 보정을 공개용으로 다시 구현한 데모입니다. 연구실 코드와 CT 데이터 대신 합성 격자 천(cloth)으로 처음부터 새로 작성한 GPU Position-Based Dynamics 실험 프로젝트입니다. 같은 장면을 CPU·GPU의 전체(global) 보정과 **활성 블록 제한(active) 보정**으로 풀어 비용과 결과를 비교하고, 실시간 뷰어로 두 솔버를 나란히 확인할 수 있습니다.
+**C/C++ · CUDA · OpenGL · CMake** — 석사 연구 [VDR](https://github.com/soz1p/VDR-Showcase)의 활성 블록 제한 보정을 공개용으로 다시 구현한 데모입니다. 연구실 코드와 CT 데이터 대신 합성 격자 천(cloth)으로 처음부터 새로 작성한 GPU Position-Based Dynamics 실험 프로젝트입니다. 같은 장면을 CPU·GPU의 전체(global) 보정과 **활성 블록 제한(active) 보정**으로 풀어 비용과 결과를 비교하고, 실시간 뷰어로 두 솔버를 나란히 확인할 수 있습니다.
 
 | 96×96 천, RTX 3090 | step | 평균 활성 블록 |
 | --- | ---: | ---: |
